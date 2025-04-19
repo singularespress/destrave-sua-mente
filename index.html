@@ -46,14 +46,6 @@
       margin-top: 16px;
     }
 
-    blockquote {
-      font-style: italic;
-      margin-top: 30px;
-      border-left: 3px solid #888;
-      padding-left: 20px;
-      color: #ccc;
-    }
-
     footer {
       background-color: #0f0f0f;
       padding: 20px;
@@ -65,6 +57,46 @@
       font-size: 14px;
     }
 
+    footer .contact {
+      margin-top: 10px;
+      font-size: 16px;
+      color: #eaeaea;
+    }
+
+    .cta-button {
+      padding: 15px 30px;
+      background-color: #ff6f61;
+      color: #fff;
+      font-size: 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 40px;
+    }
+
+    .form-container input, .form-container button {
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 5px;
+    }
+
+    .form-container input {
+      width: 80%;
+      max-width: 300px;
+      margin-bottom: 20px;
+    }
+
+    .form-container button {
+      background-color: #333;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .form-container {
+      text-align: center;
+    }
   </style>
 </head>
 <body>
@@ -94,9 +126,32 @@
     </div>
   </section>
 
-  <!-- Rodapé da página -->
+  <!-- Seção de captura de leads -->
+  <section>
+    <h2>Está pronto para dar o primeiro passo?</h2>
+    <p>Digite seu e-mail abaixo para receber o guia S13 e começar sua jornada rumo à prosperidade.</p>
+    <div class="form-container">
+      <form action="YOUR_FORM_URL" method="POST">
+        <input type="email" id="email" name="email" required placeholder="Seu e-mail" />
+        <br>
+        <button type="submit">Comece Agora</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- CTA de Checkout -->
+  <section>
+    <h2>Transforme sua vida agora.</h2>
+    <p>Se você leu até aqui, é porque algo dentro de você está pronto para mudar. **Não espere mais.**</p>
+    <button class="cta-button">Finalizar Compra e Iniciar Agora</button>
+  </section>
+
+  <!-- Rodapé -->
   <footer>
     <p>&copy; 2025 Singularis Press. Todos os direitos reservados.</p>
+    <p class="contact">
+      Para mais informações, entre em contato: <a href="mailto:contato@singularispress.com" style="color: #fff;">contato@singularispress.com</a>
+    </p>
   </footer>
 </body>
 </html>
