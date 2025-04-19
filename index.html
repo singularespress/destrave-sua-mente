@@ -9,27 +9,36 @@
       font-family: 'Segoe UI', sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #111;
+      background-color: #0f0f0f;
       color: #eaeaea;
+      background-image: url('https://example.com/cyberpunk-bg.jpg'); /* Fundo estilizado cyberpunk */
+      background-size: cover;
+      background-attachment: fixed;
+      font-weight: 300;
     }
 
     header {
-      background-color: #0f0f0f;
+      background-color: rgba(15, 15, 15, 0.85);
       padding: 20px;
       text-align: center;
+      border-bottom: 2px solid #ff6f61;
     }
 
     header h1 {
       font-size: 36px;
-      color: #fff;
+      color: #00eaff; /* Neon Cyan */
+      text-shadow: 2px 2px 4px rgba(0, 234, 255, 0.5);
       margin: 0;
+      font-family: 'Orbitron', sans-serif;
     }
 
     section {
       padding: 40px 20px;
-      background-color: #1a1a1a;
+      background-color: rgba(15, 15, 15, 0.75);
       color: #eaeaea;
       text-align: center;
+      border-radius: 15px;
+      margin: 20px 0;
     }
 
     h2 {
@@ -37,7 +46,9 @@
       text-transform: uppercase;
       letter-spacing: 2px;
       margin-bottom: 20px;
-      border-bottom: 1px solid #444;
+      border-bottom: 2px solid #ff6f61;
+      color: #ff6f61; /* Neon Red */
+      font-family: 'Orbitron', sans-serif;
     }
 
     p {
@@ -47,10 +58,11 @@
     }
 
     footer {
-      background-color: #0f0f0f;
+      background-color: rgba(15, 15, 15, 0.85);
       padding: 20px;
       text-align: center;
       color: #888;
+      border-top: 2px solid #ff6f61;
     }
 
     footer p {
@@ -72,18 +84,34 @@
       border-radius: 5px;
       cursor: pointer;
       margin-top: 40px;
+      transition: all 0.3s ease;
+    }
+
+    .cta-button:hover {
+      background-color: #00eaff;
+      box-shadow: 0px 0px 20px 2px rgba(0, 234, 255, 0.6);
     }
 
     .form-container input, .form-container button {
-      padding: 10px;
+      padding: 12px;
       font-size: 16px;
       border-radius: 5px;
+      background-color: #111;
+      color: #eaeaea;
+      border: 1px solid #444;
     }
 
     .form-container input {
       width: 80%;
       max-width: 300px;
       margin-bottom: 20px;
+      transition: all 0.3s ease;
+    }
+
+    .form-container input:focus {
+      outline: none;
+      border-color: #00eaff;
+      box-shadow: 0 0 10px rgba(0, 234, 255, 0.6);
     }
 
     .form-container button {
@@ -98,6 +126,8 @@
       text-align: center;
     }
   </style>
+  <!-- Incluindo fonte futurista -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <!-- Cabeçalho da página -->
@@ -116,7 +146,7 @@
       <p>
         Seus materiais unem estética, estratégia e clareza. Cada publicação carrega um código: despertar mentes adormecidas e quebrar as correntes invisíveis que limitam a prosperidade.
       </p>
-      <blockquote>
+      <blockquote style="color: #ff6f61;">
         “Nihil fixum est. Omnia transmutari possunt. Mens est porta libertatis.”<br>
         <span style="font-size: 14px; color: #777;">(Nada é fixo. Tudo pode ser transmutado. A mente é o portal da liberdade.)</span>
       </blockquote>
