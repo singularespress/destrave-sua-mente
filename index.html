@@ -1,165 +1,119 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Venda - S13</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>S13 • Desperte Sua Mente</title>
   <style>
     body {
-      font-family: 'Segoe UI', sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #0f0f0f;
-      color: #eaeaea;
-      background-image: url('https://example.com/cyberpunk-bg.jpg'); /* Substitua pela sua imagem */
-      background-size: cover;
-      background-attachment: fixed;
-      font-weight: 300;
+      background: #0a0a0a;
+      font-family: 'Segoe UI', sans-serif;
+      color: #f2f2f2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
     }
 
-    header {
-      background-color: rgba(15, 15, 15, 0.85);
-      padding: 20px;
+    .container {
       text-align: center;
-      border-bottom: 2px solid #ff6f61;
+      max-width: 480px;
+      padding: 30px 20px;
     }
 
-    header h1 {
-      font-size: 36px;
-      color: #00eaff; /* Neon Cyan */
-      text-shadow: 2px 2px 4px rgba(0, 234, 255, 0.5);
-      margin: 0;
-      font-family: 'Orbitron', sans-serif;
+    h1 {
+      font-size: 3.5em; /* Tamanho aumentado */
+      color: #ff4e50;
+      margin-bottom: 15px;
+      text-transform: uppercase; /* Deixei em maiúsculas */
+      transition: all 0.3s ease;
     }
 
-    section {
-      padding: 40px 20px;
-      background-color: rgba(15, 15, 15, 0.75);
-      color: #eaeaea;
-      text-align: center;
-      border-radius: 15px;
-      margin: 20px 0;
+    h1:hover {
+      color: #ff2a68; /* Efeito neon com cor alterando no hover */
+      text-shadow: 0 0 10px #ff4e50, 0 0 20px #ff4e50, 0 0 30px #ff4e50;
     }
 
     h2 {
-      font-size: 28px;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      margin-bottom: 20px;
-      border-bottom: 2px solid #ff6f61;
-      color: #ff6f61; /* Neon Red */
-      font-family: 'Orbitron', sans-serif;
+      font-size: 1.5em;
+      color: #ccc;
+      font-weight: 400;
+      margin-bottom: 30px;
     }
 
-    p {
-      font-size: 16px;
-      line-height: 1.6;
-      margin-top: 16px;
+    .bullets {
+      text-align: left;
+      margin: 20px 0;
+      color: #b3b3b3;
+      font-size: 1.1em;
+    }
+
+    .bullets li {
+      margin-bottom: 15px;
+    }
+
+    .cta-btn {
+      display: inline-block;
+      background: #0a0a0a;
+      color: #0a0a0a;
+      font-size: 18px;
+      font-weight: bold;
+      padding: 18px 35px;
+      border-radius: 50px;
+      text-decoration: none;
+      margin: 15px;
+      transition: all 0.3s ease;
+      border: 2px solid #0a0a0a;
+    }
+
+    .cta-btn:hover {
+      background: linear-gradient(45deg, #ff4e50, #ff2a68);
+      color: white;
+      box-shadow: 0 0 10px 3px rgba(255, 42, 104, 0.8);
+      transform: scale(1.05);
+    }
+
+    .cta-blue {
+      background: #0a0a0a;
+      color: #0a0a0a;
+      border-color: #0a0a0a;
+    }
+
+    .cta-blue:hover {
+      background: linear-gradient(45deg, #00e6e6, #2b98c5);
+      color: white;
+      box-shadow: 0 0 10px 3px rgba(43, 152, 197, 0.8);
     }
 
     footer {
-      background-color: rgba(15, 15, 15, 0.85);
-      padding: 20px;
-      text-align: center;
-      color: #888;
-      border-top: 2px solid #ff6f61;
-    }
-
-    footer p {
-      font-size: 14px;
-    }
-
-    footer .contact {
-      margin-top: 10px;
-      font-size: 16px;
-      color: #eaeaea;
-    }
-
-    .cta-button {
-      padding: 15px 30px;
-      background-color: #ff6f61;
-      color: #fff;
-      font-size: 20px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
       margin-top: 40px;
-      transition: all 0.3s ease;
-    }
-
-    .cta-button:hover {
-      background-color: #00eaff;
-      box-shadow: 0px 0px 20px 2px rgba(0, 234, 255, 0.6);
-    }
-
-    .form-container input, .form-container button {
-      padding: 12px;
-      font-size: 16px;
-      border-radius: 5px;
-      background-color: #111;
-      color: #eaeaea;
-      border: 1px solid #444;
-    }
-
-    .form-container input {
-      width: 80%;
-      max-width: 300px;
-      margin-bottom: 20px;
-      transition: all 0.3s ease;
-    }
-
-    .form-container input:focus {
-      outline: none;
-      border-color: #00eaff;
-      box-shadow: 0 0 10px rgba(0, 234, 255, 0.6);
-    }
-
-    .form-container {
-      text-align: center;
-    }
-
-    .quote {
-      font-size: 18px;
-      font-style: italic;
-      color: #ff6f61;
-      margin: 20px 0;
-    }
-
-    .quote small {
-      font-size: 14px;
-      color: #777;
-    }
-
-    .highlight {
-      color: #00eaff;
-      font-weight: bold;
+      font-size: 1em;
+      color: #555;
     }
   </style>
-  <!-- Fonte futurista -->
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- Cabeçalho -->
-  <header>
-    <h1>Bem-vindo ao S13: O Guia Definitivo para Prosperar em 13 Dias</h1>
-  </header>
+  <div class="container">
+    <h1>S13: Desperte Sua Mente</h1>
+    <h2>Transforme sua mentalidade em apenas 13 dias.<br>Comece agora.</h2>
 
-  <!-- Seção Singularis Press -->
-  <section id="singularis-press">
-    <div style="max-width: 800px; margin: auto;">
-      <h2>Sobre a Singularis Press</h2>
-      <p>
-        **Singularis Press** é uma editora independente com alma canadense e espírito atemporal.<br>
-        Especializada em obras de transformação mental e expansão pessoal, publicamos conteúdos com precisão, propósito e profundidade.
-      </p>
-      <p>
-        A Singularis Press não publica para todos, **mas para aqueles que estão prontos para mudar**. Se você chegou até aqui, **não é por acaso.**
-      </p>
-      <blockquote class="quote">
-        “**Nihil fixum est. Omnia transmutari possunt. Mens est porta libertatis.**”<br>
-        <small>(Nada é fixo. Tudo pode ser transmutado. A mente é o portal da liberdade.)</small>
-      </blockquote>
-      <p>
-        **Você é o arquiteto do seu destino.** O S13 é sua chave para desbloquear o poder que sempre existiu dentro de você.
-      </p>
+    <ul class="bullets">
+      <li>🔥 Quebre ciclos mentais limitantes</li>
+      <li>⚡ Acesse sua força interior sem enrolação</li>
+      <li>🧠 Um método direto, 100% prático e testado</li>
+    </ul>
+
+    <div>
+      <a href="#comprar" class="cta-btn">A mente é o portal da liberdade</a>
+      <a href="https://instagram.com" class="cta-btn cta-blue">Não estou pronto</a>
     </div>
+
+    <footer>
+      Singularis Press ® – Nihil fixum est. Omnia transmutari possunt. Mens est porta libertatis.
+    </footer>
+  </div>
+</body>
+</html>
